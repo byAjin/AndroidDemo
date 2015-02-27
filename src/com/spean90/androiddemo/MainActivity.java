@@ -9,9 +9,9 @@ import android.widget.Button;
 
 public class MainActivity extends Activity implements OnClickListener {
 	
-	private Button simpleListView;
-	private Button dateTimePicker;
-
+	private Button simpleListView;  //跳转到listview界面
+	private Button dateTimePicker; //跳转到日期时间选择器界面
+	private Button gridviewBtn;//跳转到gridview界面
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -27,6 +27,8 @@ public class MainActivity extends Activity implements OnClickListener {
 		});
 		dateTimePicker = (Button) findViewById(R.id.datatimepicker);
 		dateTimePicker.setOnClickListener(this);
+		gridviewBtn = (Button) findViewById(R.id.gridviewBtn);
+		gridviewBtn.setOnClickListener(this);
 	}
 
 	@Override
@@ -37,7 +39,11 @@ public class MainActivity extends Activity implements OnClickListener {
 			intent.setClass(MainActivity.this, DateTimePickerActivity.class);
 			startActivity(intent);
 			break;
-
+		case R.id.gridviewBtn:
+			intent = new Intent();
+			intent.setClass(MainActivity.this, GridViewActivity.class);
+			startActivity(intent);
+			break;
 		default:
 			break;
 		}

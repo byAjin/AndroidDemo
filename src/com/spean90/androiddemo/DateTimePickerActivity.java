@@ -27,6 +27,7 @@ public class DateTimePickerActivity extends Activity implements OnClickListener 
 	
 	private DatePicker datePicker;
 	private TimePicker timePicker;
+	//显示时间和日期选择对话框 按钮
 	private Button dateBtn,timeBtn;
 	Calendar calendar = Calendar.getInstance();
 	
@@ -37,13 +38,14 @@ public class DateTimePickerActivity extends Activity implements OnClickListener 
 		setContentView(R.layout.datetimeactivity);
 		datePicker = (DatePicker) findViewById(R.id.datePicker);
 		timePicker = (TimePicker) findViewById(R.id.timePicker);
-		
+		//初始化日期选择器
 		datePicker.init(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH)+1,calendar.get(Calendar.DAY_OF_MONTH) , new OnDateChangedListener() {
 			@Override
 			public void onDateChanged(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
 				setTitle(year+"-"+(monthOfYear+1)+"-"+dayOfMonth);
 			}
 		});
+		//给时间选择器设置响应监听器
 		timePicker.setOnTimeChangedListener(new OnTimeChangedListener() {
 			@Override
 			public void onTimeChanged(TimePicker view, int hourOfDay, int minute) {
