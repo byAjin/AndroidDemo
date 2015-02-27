@@ -8,6 +8,8 @@ import java.util.Map;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AbsListView;
+import android.widget.AbsListView.OnScrollListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
@@ -36,11 +38,25 @@ public class SimpleAdapterListViewActivity extends Activity {
 		simpleAdapter = new SimpleAdapter(this, getData(), R.layout.listitem, new String[]{"pic","text"}, new int[]{R.id.pic,R.id.text});
 		listView.setAdapter(simpleAdapter);
 		listView.setOnItemClickListener(new OnItemClickListener() {
+
 			@Override
-			public void onItemClick(AdapterView<?> arg0, View view, int position, long arg3) {
+			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 				//String text = listView.getItemAtPosition(position)+"";
 				String text = ((TextView)view.findViewById(R.id.text)).getText().toString();
 				Toast.makeText(SimpleAdapterListViewActivity.this, text, Toast.LENGTH_LONG).show();
+			}
+		});
+		listView.setOnScrollListener(new OnScrollListener() {
+			@Override
+			public void onScrollStateChanged(AbsListView view, int scrollState) {
+				// TODO Auto-generated method stub
+				
+			}
+			@Override
+			public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount,
+					int totalItemCount) {
+				// TODO Auto-generated method stub
+				
 			}
 		});
 	}
