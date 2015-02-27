@@ -36,6 +36,13 @@ public class GridViewActivity extends Activity {
 		setContentView(R.layout.gridviewactivity);
 		gridView = (GridView) findViewById(R.id.gridView);
 		datas = new ArrayList<Map<String,Object>>();
+		/**
+		 * 参数1：context上下午
+		 * 参数2:List<Map<String,Object>> 数据源；
+		 * 参数3：item的布局文件
+		 * 参数4：数据源中map的所有的key;
+		 * 参数5：布局文件中与key相对应的id；
+		 */
 		SimpleAdapter simpleAdapter = new SimpleAdapter(this, getData(), R.layout.gridview_item, new String[]{"pic","text"}, new int[]{R.id.gridview_pic,R.id.gridview_text});
 		gridView.setAdapter(simpleAdapter);
 		

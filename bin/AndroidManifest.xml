@@ -31,6 +31,8 @@
         <activity 
             android:theme="@android:style/Theme.Black.NoTitleBar"
             android:name="com.spean90.androiddemo.GridViewActivity"></activity>
+        <activity 
+            android:name="com.spean90.androiddemo.spinnerActivity"></activity>
     </application>
 
 </manifest>
