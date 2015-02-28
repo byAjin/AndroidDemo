@@ -13,6 +13,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	private Button dateTimePicker; //跳转到日期时间选择器界面
 	private Button gridviewBtn;//跳转到gridview界面
 	private Button spinnerBtn;//跳转到下拉列表界面
+	private Button progressBarBtn;//processbar
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -32,6 +33,8 @@ public class MainActivity extends Activity implements OnClickListener {
 		gridviewBtn.setOnClickListener(this);
 		spinnerBtn = (Button) findViewById(R.id.spinnerBtn);
 		spinnerBtn.setOnClickListener(this);
+		progressBarBtn = (Button) findViewById(R.id.processBarBtn);
+		progressBarBtn.setOnClickListener(this);
 	}
 
 	@Override
@@ -50,6 +53,11 @@ public class MainActivity extends Activity implements OnClickListener {
 		case R.id.spinnerBtn:
 			intent = new Intent();
 			intent.setClass(MainActivity.this, spinnerActivity.class);
+			startActivity(intent);
+			break;
+		case R.id.processBarBtn:
+			intent = new Intent();
+			intent.setClass(MainActivity.this, ProgressBarActivity.class);
 			startActivity(intent);
 			break;
 		default:

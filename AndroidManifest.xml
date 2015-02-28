@@ -33,6 +33,7 @@
             android:name="com.spean90.androiddemo.GridViewActivity"></activity>
         <activity 
             android:name="com.spean90.androiddemo.spinnerActivity"></activity>
+        <activity android:name="com.spean90.androiddemo.ProgressBarActivity"></activity>
     </application>
 
 </manifest>

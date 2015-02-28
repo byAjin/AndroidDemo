@@ -35,6 +35,13 @@ public class SimpleAdapterListViewActivity extends Activity {
 		this.setContentView(R.layout.listviewactivity);
 		listView = (ListView) findViewById(R.id.listView);
 		data = new ArrayList<Map<String,Object>>();
+		/**
+		 * 参数1：context上下午
+		 * 参数2:List<Map<String,Object>> 数据源；
+		 * 参数3：item的布局文件
+		 * 参数4：数据源中map的所有的key;
+		 * 参数5：布局文件中与key相对应的id；
+		 */
 		simpleAdapter = new SimpleAdapter(this, getData(), R.layout.listitem, new String[]{"pic","text"}, new int[]{R.id.pic,R.id.text});
 		listView.setAdapter(simpleAdapter);
 		listView.setOnItemClickListener(new OnItemClickListener() {
