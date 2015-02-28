@@ -14,6 +14,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	private Button gridviewBtn;//跳转到gridview界面
 	private Button spinnerBtn;//跳转到下拉列表界面
 	private Button progressBarBtn;//processbar
+	private Button webViewBtn; //webview
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -35,6 +36,8 @@ public class MainActivity extends Activity implements OnClickListener {
 		spinnerBtn.setOnClickListener(this);
 		progressBarBtn = (Button) findViewById(R.id.processBarBtn);
 		progressBarBtn.setOnClickListener(this);
+		webViewBtn = (Button) findViewById(R.id.webviewBtn);
+		webViewBtn.setOnClickListener(this);
 	}
 
 	@Override
@@ -58,6 +61,11 @@ public class MainActivity extends Activity implements OnClickListener {
 		case R.id.processBarBtn:
 			intent = new Intent();
 			intent.setClass(MainActivity.this, ProgressBarActivity.class);
+			startActivity(intent);
+			break;
+		case R.id.webviewBtn:
+			intent = new Intent();
+			intent.setClass(MainActivity.this, WebViewActivity.class);
 			startActivity(intent);
 			break;
 		default:
