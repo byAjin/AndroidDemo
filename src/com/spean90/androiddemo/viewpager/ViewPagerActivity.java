@@ -3,23 +3,28 @@ package com.spean90.androiddemo.viewpager;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.spean90.androiddemo.R;
-
-import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.PagerTabStrip;
 import android.support.v4.view.ViewPager;
+import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
-public class ViewPagerActivity extends Activity {
+import com.spean90.androiddemo.R;
+
+public class ViewPagerActivity extends FragmentActivity implements OnPageChangeListener {
 
 	private ViewPager viewPager;
 	private List<View> list;
 	private List<String>titleList;
 	private PagerTabStrip pagerTabStrip;
+	private List<Fragment> fragmentList;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -49,12 +54,38 @@ public class ViewPagerActivity extends Activity {
 		titleList.add("第4页");
 		PagerAdapter pagerAdapter = new MyPagerAdapter(list,titleList);
 		viewPager = (ViewPager) findViewById(R.id.viewpager);
-		viewPager.setAdapter(pagerAdapter);
+		//viewPager.setAdapter(pagerAdapter);
 		pagerTabStrip = (PagerTabStrip) findViewById(R.id.viewpagertab);
 		pagerTabStrip.setBackgroundColor(Color.GRAY);
 		pagerTabStrip.setDrawFullUnderline(false);
 		pagerTabStrip.setTabIndicatorColor(Color.GREEN);
 		pagerTabStrip.setTextColor(Color.RED);
 		
+		fragmentList = new ArrayList<Fragment>();
+		fragmentList.add(new Fragment1());
+		fragmentList.add(new Fragment2());
+		fragmentList.add(new Fragment3());
+		fragmentList.add(new Fragment4());
+		FragmentPagerAdapter fragmentPagerAdapter = new MyFragmentAdapter(getSupportFragmentManager(), fragmentList, titleList);
+		viewPager.setAdapter(fragmentPagerAdapter);
+		viewPager.setOnPageChangeListener(this);
+		
+	}
+
+	@Override
+	public void onPageScrollStateChanged(int arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onPageScrolled(int arg0, float arg1, int arg2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onPageSelected(int arg0) {
+		Toast.makeText(this, "选择第"+(arg0+1)+"页", Toast.LENGTH_LONG).show();
 	}
 }
