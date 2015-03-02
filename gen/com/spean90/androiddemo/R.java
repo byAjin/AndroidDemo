@@ -36,7 +36,7 @@ public final class R {
         public static final int youtube=0x7f02000c;
     }
     public static final class id {
-        public static final int action_settings=0x7f08001e;
+        public static final int action_settings=0x7f08001f;
         public static final int addprogressbar=0x7f080015;
         public static final int button1=0x7f080000;
         public static final int datatimepicker=0x7f080001;
@@ -65,7 +65,8 @@ public final class R {
         public static final int viewPagerBtn=0x7f080006;
         public static final int viewpager=0x7f08001c;
         public static final int viewpagerItem=0x7f08001b;
-        public static final int webView=0x7f08001d;
+        public static final int viewpagertab=0x7f08001d;
+        public static final int webView=0x7f08001e;
         public static final int webviewBtn=0x7f080005;
     }
     public static final class layout {

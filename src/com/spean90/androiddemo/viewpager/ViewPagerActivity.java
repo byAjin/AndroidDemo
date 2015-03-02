@@ -6,8 +6,10 @@ import java.util.List;
 import com.spean90.androiddemo.R;
 
 import android.app.Activity;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.PagerTabStrip;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.TextView;
@@ -16,6 +18,8 @@ public class ViewPagerActivity extends Activity {
 
 	private ViewPager viewPager;
 	private List<View> list;
+	private List<String>titleList;
+	private PagerTabStrip pagerTabStrip;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -38,8 +42,19 @@ public class ViewPagerActivity extends Activity {
 		list.add(view2);
 		list.add(view3);
 		list.add(view4);
-		PagerAdapter pagerAdapter = new MyPagerAdapter(list);
+		titleList = new ArrayList<String>();
+		titleList.add("第一页");
+		titleList.add("第2页");
+		titleList.add("第3页");
+		titleList.add("第4页");
+		PagerAdapter pagerAdapter = new MyPagerAdapter(list,titleList);
 		viewPager = (ViewPager) findViewById(R.id.viewpager);
 		viewPager.setAdapter(pagerAdapter);
+		pagerTabStrip = (PagerTabStrip) findViewById(R.id.viewpagertab);
+		pagerTabStrip.setBackgroundColor(Color.GRAY);
+		pagerTabStrip.setDrawFullUnderline(false);
+		pagerTabStrip.setTabIndicatorColor(Color.GREEN);
+		pagerTabStrip.setTextColor(Color.RED);
+		
 	}
 }

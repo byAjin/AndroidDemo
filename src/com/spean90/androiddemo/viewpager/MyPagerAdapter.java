@@ -9,9 +9,10 @@ import android.view.ViewGroup;
 public class MyPagerAdapter extends PagerAdapter {
 	
 	private List<View>viewList;
-	
-	public MyPagerAdapter(List<View>viewList) {
+	private List<String>titleList;
+	public MyPagerAdapter(List<View>viewList,List<String>titleList) {
 		this.viewList = viewList;
+		this.titleList = titleList;
 	}
 
 	@Override
@@ -38,6 +39,11 @@ public class MyPagerAdapter extends PagerAdapter {
 	@Override
 	public void destroyItem(ViewGroup container, int position, Object object) {
 		container.removeView(viewList.get(position));
+	}
+	
+	@Override
+	public CharSequence getPageTitle(int position) {
+		return titleList.get(position);
 	}
 
 }
