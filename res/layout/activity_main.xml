@@ -46,6 +46,14 @@
             android:layout_centerHorizontal="true"
             android:text="webview" />
 
+        <Button
+            android:id="@+id/viewPagerBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/webviewBtn"
+            android:text="viewPager" />
+
     </RelativeLayout>
 
 </LinearLayout>

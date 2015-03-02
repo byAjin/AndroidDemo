@@ -1,5 +1,7 @@
 package com.spean90.androiddemo;
 
+import com.spean90.androiddemo.viewpager.ViewPagerActivity;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -15,6 +17,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	private Button spinnerBtn;//跳转到下拉列表界面
 	private Button progressBarBtn;//processbar
 	private Button webViewBtn; //webview
+	private Button viewPagerBtn;//viewPager
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -38,6 +41,8 @@ public class MainActivity extends Activity implements OnClickListener {
 		progressBarBtn.setOnClickListener(this);
 		webViewBtn = (Button) findViewById(R.id.webviewBtn);
 		webViewBtn.setOnClickListener(this);
+		viewPagerBtn = (Button) findViewById(R.id.viewPagerBtn);
+		viewPagerBtn.setOnClickListener(this);
 	}
 
 	@Override
@@ -66,6 +71,11 @@ public class MainActivity extends Activity implements OnClickListener {
 		case R.id.webviewBtn:
 			intent = new Intent();
 			intent.setClass(MainActivity.this, WebViewActivity.class);
+			startActivity(intent);
+			break;
+		case R.id.viewPagerBtn:
+			intent = new Intent();
+			intent.setClass(MainActivity.this, ViewPagerActivity.class);
 			startActivity(intent);
 			break;
 		default:
