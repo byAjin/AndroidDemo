@@ -28,7 +28,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="match_parent" >
 
         <Button
             android:id="@+id/processBarBtn"
@@ -53,6 +53,14 @@
             android:layout_alignParentTop="true"
             android:layout_toRightOf="@+id/webviewBtn"
             android:text="viewPager" />
+
+        <Button
+            android:id="@+id/viewFlipperBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/processBarBtn"
+            android:text="viewFlipper" />
 
     </RelativeLayout>
 

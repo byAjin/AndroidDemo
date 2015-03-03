@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ViewFlipper;
 
 public class MainActivity extends Activity implements OnClickListener {
 	
@@ -18,6 +19,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	private Button progressBarBtn;//processbar
 	private Button webViewBtn; //webview
 	private Button viewPagerBtn;//viewPager
+	private Button viewFlipperBtn;//viewFlipper
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -43,6 +45,8 @@ public class MainActivity extends Activity implements OnClickListener {
 		webViewBtn.setOnClickListener(this);
 		viewPagerBtn = (Button) findViewById(R.id.viewPagerBtn);
 		viewPagerBtn.setOnClickListener(this);
+		viewFlipperBtn = (Button) findViewById(R.id.viewFlipperBtn);
+		viewFlipperBtn.setOnClickListener(this);
 	}
 
 	@Override
@@ -76,6 +80,11 @@ public class MainActivity extends Activity implements OnClickListener {
 		case R.id.viewPagerBtn:
 			intent = new Intent();
 			intent.setClass(MainActivity.this, ViewPagerActivity.class);
+			startActivity(intent);
+			break;
+		case R.id.viewFlipperBtn:
+			intent = new Intent();
+			intent.setClass(MainActivity.this, ViewFlipperActivity.class);
 			startActivity(intent);
 			break;
 		default:

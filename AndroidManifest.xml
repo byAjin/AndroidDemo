@@ -37,6 +37,8 @@
         <activity android:name="com.spean90.androiddemo.ProgressBarActivity"></activity>
         <activity android:name="com.spean90.androiddemo.WebViewActivity"></activity>
         <activity android:name="com.spean90.androiddemo.viewpager.ViewPagerActivity"></activity>
+        <activity android:name="com.spean90.androiddemo.ViewFlipperActivity"
+            android:theme="@android:style/Theme.Black.NoTitleBar"></activity>
     </application>
 
 </manifest>
