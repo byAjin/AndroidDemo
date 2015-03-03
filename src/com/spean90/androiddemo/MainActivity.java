@@ -20,6 +20,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	private Button webViewBtn; //webview
 	private Button viewPagerBtn;//viewPager
 	private Button viewFlipperBtn;//viewFlipper
+	private Button scrollViewBtn;//scrollViewBtn
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -47,6 +48,8 @@ public class MainActivity extends Activity implements OnClickListener {
 		viewPagerBtn.setOnClickListener(this);
 		viewFlipperBtn = (Button) findViewById(R.id.viewFlipperBtn);
 		viewFlipperBtn.setOnClickListener(this);
+		scrollViewBtn = (Button) findViewById(R.id.scrollViewBtn);
+		scrollViewBtn.setOnClickListener(this);
 	}
 
 	@Override
@@ -85,6 +88,11 @@ public class MainActivity extends Activity implements OnClickListener {
 		case R.id.viewFlipperBtn:
 			intent = new Intent();
 			intent.setClass(MainActivity.this, ViewFlipperActivity.class);
+			startActivity(intent);
+			break;
+		case R.id.scrollViewBtn:
+			intent = new Intent();
+			intent.setClass(MainActivity.this, ScrollViewActivity.class);
 			startActivity(intent);
 			break;
 		default:

@@ -39,6 +39,7 @@
         <activity android:name="com.spean90.androiddemo.viewpager.ViewPagerActivity"></activity>
         <activity android:name="com.spean90.androiddemo.ViewFlipperActivity"
             android:theme="@android:style/Theme.Black.NoTitleBar"></activity>
+        <activity android:name="com.spean90.androiddemo.ScrollViewActivity"></activity>
     </application>
 
 </manifest>
