@@ -44,6 +44,11 @@ public class ScrollViewActivity extends Activity {
 						Log.i("main", "滑动到底部..");
 						Log.i("main", "textview的高度："+tv.getMeasuredHeight()+"=="+scrollView.getChildAt(0).getMeasuredHeight());
 						Log.i("main", "一屏幕高度："+scrollView.getHeight()+" 滑动高度："+scrollView.getScrollY());
+						/**
+						 * scrollTo(x,y)--移动到相对顶部的位置；
+						 * scrollBy(x,y)--相对现在的位置移动
+						 */
+						//scrollView.scrollBy(0, 0);
 					}
 					break;
 
