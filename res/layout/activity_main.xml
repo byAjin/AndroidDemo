@@ -79,6 +79,14 @@
             android:layout_toRightOf="@+id/scrollViewBtn"
             android:text="dialogBtn" />
 
+        <Button
+            android:id="@+id/notificationBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/viewFlipperBtn"
+            android:text="notificationBtn" />
+
     </RelativeLayout>
 
 </LinearLayout>

@@ -22,6 +22,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	private Button viewFlipperBtn;//viewFlipper
 	private Button scrollViewBtn;//scrollViewBtn
 	private Button dialogBtn;//dialogBtn
+	private Button notificationBtn;//notificationBtn
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -53,6 +54,8 @@ public class MainActivity extends Activity implements OnClickListener {
 		scrollViewBtn.setOnClickListener(this);
 		dialogBtn = (Button) findViewById(R.id.dialogBtn);
 		dialogBtn.setOnClickListener(this);
+		notificationBtn = (Button) findViewById(R.id.notificationBtn);
+		notificationBtn.setOnClickListener(this);
 	}
 
 	@Override
@@ -101,6 +104,11 @@ public class MainActivity extends Activity implements OnClickListener {
 		case R.id.dialogBtn:
 			intent = new Intent();
 			intent.setClass(MainActivity.this, DialogActivity.class);
+			startActivity(intent);
+			break;
+		case R.id.notificationBtn:
+			intent = new Intent();
+			intent.setClass(MainActivity.this, NotificationActivity.class);
 			startActivity(intent);
 			break;
 		default:

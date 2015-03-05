@@ -41,6 +41,7 @@
             android:theme="@android:style/Theme.Black.NoTitleBar"></activity>
         <activity android:name="com.spean90.androiddemo.ScrollViewActivity"></activity>
         <activity android:name="com.spean90.androiddemo.DialogActivity"></activity>
+        <activity android:name="com.spean90.androiddemo.NotificationActivity"></activity>
     </application>
 
 </manifest>
