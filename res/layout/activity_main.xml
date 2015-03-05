@@ -71,6 +71,14 @@
             android:layout_toRightOf="@+id/viewFlipperBtn"
             android:text="scrollView" />
 
+        <Button
+            android:id="@+id/dialogBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viewPagerBtn"
+            android:layout_toRightOf="@+id/scrollViewBtn"
+            android:text="dialogBtn" />
+
     </RelativeLayout>
 
 </LinearLayout>
