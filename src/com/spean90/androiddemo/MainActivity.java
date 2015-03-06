@@ -25,6 +25,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	private Button notificationBtn;//notificationBtn
 	private Button animationBtn;//notificationBtn
 	private Button sharedPreferenceBtn;//sharedPreferenceBtn
+	private Button fileBtn;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -62,6 +63,8 @@ public class MainActivity extends Activity implements OnClickListener {
 		animationBtn.setOnClickListener(this);
 		sharedPreferenceBtn = (Button) findViewById(R.id.sharedPreferenceBtn);
 		sharedPreferenceBtn.setOnClickListener(this);
+		fileBtn = (Button) findViewById(R.id.fileBtn);
+		fileBtn.setOnClickListener(this);
 	}
 
 	@Override
@@ -125,6 +128,11 @@ public class MainActivity extends Activity implements OnClickListener {
 		case R.id.sharedPreferenceBtn:
 			intent = new Intent();
 			intent.setClass(MainActivity.this, SharePreferenceActivity.class);
+			startActivity(intent);
+			break;
+		case R.id.fileBtn:
+			intent = new Intent();
+			intent.setClass(MainActivity.this, FileActivity.class);
 			startActivity(intent);
 			break;
 		default:

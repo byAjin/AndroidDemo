@@ -44,6 +44,7 @@
         <activity android:name="com.spean90.androiddemo.NotificationActivity"></activity>
         <activity android:name="com.spean90.androiddemo.AnimationActivity"></activity>
         <activity android:name="com.spean90.androiddemo.SharePreferenceActivity"></activity>
+        <activity android:name="com.spean90.androiddemo.FileActivity"></activity>
     </application>
 
 </manifest>

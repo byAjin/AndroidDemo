@@ -105,6 +105,14 @@
             android:layout_below="@+id/notificationBtn"
             android:text="sharedPreferenceBtn" />
 
+        <Button
+            android:id="@+id/fileBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/animationBtn"
+            android:layout_toRightOf="@+id/sharedPreferenceBtn"
+            android:text="fileBtn" />
+
     </RelativeLayout>
 
 </LinearLayout>
