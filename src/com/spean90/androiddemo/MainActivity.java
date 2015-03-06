@@ -23,6 +23,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	private Button scrollViewBtn;//scrollViewBtn
 	private Button dialogBtn;//dialogBtn
 	private Button notificationBtn;//notificationBtn
+	private Button animationBtn;//notificationBtn
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -56,6 +57,8 @@ public class MainActivity extends Activity implements OnClickListener {
 		dialogBtn.setOnClickListener(this);
 		notificationBtn = (Button) findViewById(R.id.notificationBtn);
 		notificationBtn.setOnClickListener(this);
+		animationBtn = (Button) findViewById(R.id.animationBtn);
+		animationBtn.setOnClickListener(this);
 	}
 
 	@Override
@@ -111,6 +114,11 @@ public class MainActivity extends Activity implements OnClickListener {
 			intent.setClass(MainActivity.this, NotificationActivity.class);
 			startActivity(intent);
 			break;
+		case R.id.animationBtn:
+		intent = new Intent();
+		intent.setClass(MainActivity.this, AnimationActivity.class);
+		startActivity(intent);
+		break;
 		default:
 			break;
 		}

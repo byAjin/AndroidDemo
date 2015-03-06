@@ -42,6 +42,7 @@
         <activity android:name="com.spean90.androiddemo.ScrollViewActivity"></activity>
         <activity android:name="com.spean90.androiddemo.DialogActivity"></activity>
         <activity android:name="com.spean90.androiddemo.NotificationActivity"></activity>
+        <activity android:name="com.spean90.androiddemo.AnimationActivity"></activity>
     </application>
 
 </manifest>
